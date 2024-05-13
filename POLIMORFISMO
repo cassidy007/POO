@@ -1,0 +1,30 @@
+// Definición de una interfaz
+interface Animal {
+    void hacerSonido();
+}
+
+// Implementación de la interfaz en diferentes clases
+class Perro implements Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("Guau");
+    }
+}
+
+class Gato implements Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("Miau");
+    }
+}
+
+// Uso del polimorfismo
+public class Main {
+    public static void main(String[] args) {
+        Animal miPerro = new Perro();
+        Animal miGato = new Gato();
+
+        miPerro.hacerSonido();
+        miGato.hacerSonido();
+    }
+}
