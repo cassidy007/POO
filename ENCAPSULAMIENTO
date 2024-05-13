@@ -1,0 +1,35 @@
+// Definición de una clase que encapsula los datos y comportamientos de un vehículo
+class Vehiculo {
+    private String marca;
+    private String modelo;
+
+    // Constructor
+    public Vehiculo(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    // Métodos para acceder y modificar los atributos de manera controlada
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+}
+
+// Uso de la clase Vehiculo
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo miVehiculo = new Vehiculo("Toyota", "Corolla");
+        System.out.println("Marca: " + miVehiculo.getMarca());
+        System.out.println("Modelo: " + miVehiculo.getModelo());
+        miVehiculo.setModelo("Camry");
+        System.out.println("Modelo actualizado: " + miVehiculo.getModelo());
+    }
+}
